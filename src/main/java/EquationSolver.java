@@ -1,9 +1,7 @@
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 
-@Setter
 @Getter
 public class EquationSolver {
     ArrayList<Double> listOfArguments;
