@@ -5,6 +5,7 @@ import org.junit.jupiter.api.TestInstance;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class CalculationsTest {
@@ -37,5 +38,14 @@ class CalculationsTest {
         double root = calculations.calculateRoot(numberForGetRoot);
 
         assertEquals(5, root);
+    }
+
+    @Test
+    void calculateRootWhenNumberIsNegativeTest() {
+        double negativeNumber = -25.0;
+
+        assertThrows(ArithmeticException.class, () -> {
+            calculations.calculateRoot(negativeNumber);
+        });
     }
 }
