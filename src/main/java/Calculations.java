@@ -13,7 +13,7 @@ public class Calculations {
         double root = 0;
 
         if (number < 0) {
-            System.out.println("Can't calculate root of negative number");
+            throw new ArithmeticException("Can't extract square from a negative number");
         } else {
             root = Math.sqrt(number);
         }
