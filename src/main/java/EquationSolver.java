@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 @Getter
 public class EquationSolver {
-    ArrayList<Double> listOfArguments;
-    Calculations calculations;
+    private ArrayList<Double> listOfArguments;
+    private Calculations calculations;
 
     public EquationSolver(ArrayList<Double> listOfArguments, Calculations calculations) {
         this.listOfArguments = listOfArguments;
